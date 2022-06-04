@@ -9,6 +9,13 @@
 # no.3
 
 <img src = "no3.png">
+<img src = "no3-1 (1).png">
+<img src = "no3-1 (2).png">
+
+# no.4
+
+<img src = "no4.png">
+
 
 # Scanner
 

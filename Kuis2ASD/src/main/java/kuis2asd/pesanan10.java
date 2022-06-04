@@ -15,7 +15,7 @@ public class pesanan10 {
     String namaPesanan;
     pesanan10 next, prev;
     
-    pesanan10(pesanan10 prev, int kodePesanan, int harga, String namaPesanan, pesanan10 next){
+    pesanan10(pesanan10 prev, int kodePesanan, String namaPesanan, int harga, pesanan10 next){
         this.next= next;
         this.prev = prev;
         this.kodePesanan = kodePesanan;

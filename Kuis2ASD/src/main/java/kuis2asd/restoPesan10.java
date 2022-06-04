@@ -31,6 +31,51 @@ public class restoPesan10 {
         size = 0;
     }
     
+    public void addFirstPesan(int kodePesanan, String namaPesanan, int harga){
+        if(isEmpty()){
+            head = new pesanan10(null,  kodePesanan,  namaPesanan, harga, null);
+        } else {
+            pesanan10 newNode = new pesanan10(null, kodePesanan,  namaPesanan, harga, null);
+            head.prev = newNode;
+            head = newNode;
+        }
+        size++;
+    }
+    
+    public void addLastPesan(int kodePesanan, String namaPesanan, int harga){
+        if(isEmpty()){
+            addFirstPesan(kodePesanan,  namaPesanan, harga);
+        } else {
+            pesanan10 current = head;
+            while(current.next != null){
+                current = current.next;
+            }
+            pesanan10 newNode = new pesanan10(current, kodePesanan,  namaPesanan, harga, null);
+            current.next = newNode;
+            size++;
+        }
+    }
+    
+    public void print(){
+        if(!isEmpty()){
+            pesanan10 tmp = head;
+            System.out.println("===================");
+            System.out.println("Daftar Pemesanan");
+            System.out.println("===================");
+            System.out.println("|No\t|Nama Pembeli\t|No HP\t|");
+            while (tmp != null){
+                System.out.print("|" + tmp.kodePesanan + "\t|"+ tmp.namaPesanan + "\t|" + tmp.harga + "\t|");
+                System.out.println();
+                tmp = tmp.next;
+            }
+            System.out.println();
+            System.out.println("Total antrian: " + size);
+            System.out.println();
+        } else {
+            System.out.println("Antrian kosong");
+        }
+    }
+    
     public void bubbleSortPesanan(){
         pesanan10 current = null, index = null;
         int tmp;

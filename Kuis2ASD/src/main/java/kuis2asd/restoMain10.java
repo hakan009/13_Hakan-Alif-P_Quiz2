@@ -63,6 +63,20 @@ public class restoMain10 {
                         
                     case 3:
                         b.removeFirst();
+                        System.out.println("===============");
+                        System.out.println("Kode Pesanan: ");
+                        int kodePesanan = hakan.nextInt();
+                        System.out.print("Nama Pesanan: ");
+                        String namaPesanan = alif.nextLine();
+                        System.out.print("Harga:  ");
+                        int harga = hakan.nextInt();
+                        System.out.println("===========");
+                        p.addFirstPesan(kodePesanan, namaPesanan, harga);
+                        break;
+                        
+                    case 4:
+                        p.bubbleSortPesanan();
+                        p.print();
                         break;
                         
                     case 6:
